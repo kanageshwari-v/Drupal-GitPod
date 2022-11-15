@@ -1,24 +1,27 @@
 <?php
-$array_a =array('the','amen');
-$array_b =array(',','.', '#');
-$str = "Hello, the world. Then, it is over.";
 
-function earchString($str, $array_a, $array_b) {
-    forEach($array_a as $test) {
-        $pos = strpos($str, $test);
-        if ($pos===false) continue;
-        $found = [];
-        forEach($array_b as $test2) {
-            $posStart = $pos+strlen($test);
-            $pos2 = strpos($str, $test2, $posStart);
-            $found[] = ($pos2!==false) ? $pos2 : INF;
+function stringBetween($string, $startingWords, $endingWords) {
+    foreach ($startingWords as $startingWord) {
+        $subtringStart = strpos($string, $startingWord);
+        
+        if ($subtringStart > 0) {
+            foreach ($endingWords as $endingWord){
+                $size = strpos($string, $endingWord, $subtringStart) - $subtringStart + strlen($endingWord);
+                if ($size > 0) {
+                    break;
+                }
+            }
+            if ($size > 0) {
+                return substr($string, $subtringStart, $size);
+            }
         }
-        $min = min($found);
-        if ($min !== INF)
-            return substr($str,$pos,$min-$pos) .$str[$min];
     }
-    return '';
+    return null;
 }
 
-echo earchString($str, $array_a, $array_b);
+$startArr = array('the', 'amen'); // Starting strings
+$endArr = array('.', ','); // Ending strings
+$str = "Hello, the world. Then, it is over.";
+
+echo stringBetween($str, $startArr, $endArr); // the world.
 ?>
