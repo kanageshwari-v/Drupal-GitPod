@@ -1,6 +1,6 @@
 <?php
  function get_likes($names){
-  if(count($names)>0){
+  if(count($names)==0){
     return"no one like this\n";
   }
   if (count($names) ==1){
