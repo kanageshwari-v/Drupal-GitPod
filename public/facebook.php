@@ -15,9 +15,9 @@
  }
  if (count($names)>3) {
   $remaining = count(&names) -2;
-  return "$names[0],$names[1] and $remaining others like this\n";
+  return "$names[0], $names[1] and $remaining others like this\n";
  }
- }
+}
  echo get_likes([]);
  echo get_likes(["peter"]);
  echo get_likes(["jacob","alex"]);
