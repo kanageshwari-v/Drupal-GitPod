@@ -1,18 +1,14 @@
 <?php
+function check($string,$substring){
+    $upper_string=strtoupper($string);
+    $upper_substring=strtoupper($substring);
+    if (str_ends_with($upper_string,$upper_substring)){
+        return "True<br>"; 
+    } else {
+        return "False<br>";
+    }
 
-function startsWithChar($needle, $haystack)
-{
-   return ($needle === $haystack[0]);
 }
-
-function endsWithChar($needle, $haystack)
-{
-   return ($needle === $haystack[strlen($haystack) - 1]);
-}
-
-$str='|apples}';
-echo startsWithChar('|',$str); //Returns true
-echo endsWithChar('}',$str); //Returns true
-echo startsWithChar('=',$str); //Returns false
-echo endsWithChar('#',$str); //Returns false
+echo check("THARUNKARTHICK","TK");
+echo check("JOTHISH","sh");
 ?>
