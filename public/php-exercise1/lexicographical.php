@@ -1,9 +1,7 @@
 <?php
-
 function stringBetween($string, $startingWords, $endingWords) {
     foreach ($startingWords as $startingWord) {
         $subtringStart = strpos($string, $startingWord);
-        
         if ($subtringStart > 0) {
             foreach ($endingWords as $endingWord){
                 $size = strpos($string, $endingWord, $subtringStart) - $subtringStart + strlen($endingWord);
@@ -18,10 +16,8 @@ function stringBetween($string, $startingWords, $endingWords) {
     }
     return null;
 }
-
-$startArr = array('the', 'amen'); // Starting strings
-$endArr = array('.', ','); // Ending strings
+$startArr = array('the', 'amazing'); // Starting strings
+$endArr = array('dog.','tammy', ',','hello world'); // Ending strings
 $str = "Hello, the world. Then, it is over.";
-
-echo stringBetween($str, $startArr, $endArr); // the world.
+echo stringBetween($str, $startArr, $endArr); 
 ?>
