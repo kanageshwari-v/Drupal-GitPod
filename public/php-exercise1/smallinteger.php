@@ -9,4 +9,5 @@ foreach($a as $x){
 }
 return $min;
 }
+echo smallest_2($a)
 ?>
