@@ -16,4 +16,5 @@ function findShort($str){
   
   return $shortest;
 }
+echo findshort($str);
 ?>

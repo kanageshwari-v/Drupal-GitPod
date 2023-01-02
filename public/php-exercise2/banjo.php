@@ -1,5 +1,5 @@
 <?php
-$name = 
+
 function areYouPlaying(name) {
   if (name[0] === 'R' || name[0] === 'r') {
     return `${name} plays banjo`;
