@@ -7,6 +7,6 @@ function areYouPlaying($name) {
     return `${name} does not play banjo`;
   }
 }
-areYouPlaying('Leo');    
-areYouPlaying('Ralph');  
+echo areYouPlaying('Leo');    
+echo areYouPlaying('Ralph');  
 ?>
