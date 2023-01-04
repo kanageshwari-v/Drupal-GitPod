@@ -1,5 +1,6 @@
 <?php
- $str = 'This Is New Method Ever';
-  $newstr = preg_replace([[:space:]])+', '',  trim($str));
- echo $newstr
+ $string = 'This Is New Method Ever';
+ $string = str_replace(' ', '', $string);
+
+ echo $string
 ?>
