@@ -5,6 +5,7 @@ function armstrong_number($num) {
   $num = (string)$num;
   for ($i = 0; $i < $sl; $i++) {
     $sum = $sum + pow((string)$num{$i},$sl);
+    
   }
   if ((string)$sum == (string)$num) {
     return "True";
