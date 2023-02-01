@@ -1,5 +1,5 @@
 <?php
-function fin_no_repeat($word){
+function find_no_repeat($word){
     $char = null;
     for($i = 0; $i<= strlen($word); $i++){
         if(substr_count($word, substr($word, $i,1)) ==1){

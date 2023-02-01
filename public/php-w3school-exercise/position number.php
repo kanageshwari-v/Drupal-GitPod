@@ -10,7 +10,6 @@ function test_bit_position($num, $pos1, $pos2){
         return "false";
 
     }
-
 }
 echo test_bit_position(112, 5,6);
 ?>
